@@ -1,0 +1,70 @@
+<html>
+<head>
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="jquery.cookie.js"></script>
+<script>
+<!--
+jQuery( function() {
+    backgroundColor();
+    jQuery( '#backgroundColorCoral' ).click( function () {
+        backgroundColor( 'coral' );
+    } );
+    jQuery( '#backgroundColorYellow' ).click( function () {
+        backgroundColor( 'yellow' );
+    } );
+    jQuery( '#backgroundColorSkyblue' ).click( function () {
+        backgroundColor( 'skyblue' );
+    } );
+    function backgroundColor( $backgroundColor ){
+        if( $backgroundColor == undefined ){
+            var $backgroundColor = jQuery.cookie( 'backgroundColor' );
+            if( $backgroundColor == undefined ){
+                var $backgroundColor = 'yellow';
+            }
+        }
+        jQuery( '#backgroundColor' ).html( $backgroundColor );
+        jQuery.cookie( 'backgroundColor', $backgroundColor, { expires: 1 } );
+        jQuery( '#sample' ).css( { 'backgroundColor': $backgroundColor } );
+    }
+} );
+// -->
+</script>
+<style type="text/css">
+#backgroundColorCoral,
+#backgroundColorYellow,
+#backgroundColorSkyblue {
+    margin-right: 1em;
+    padding: 0.5em 1em;
+    border: 1px solid #666666;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#backgroundColorCoral {
+    background-color: coral;
+}
+#backgroundColorYellow {
+    background-color: yellow;
+}
+#backgroundColorSkyblue {
+    background-color: skyblue;
+    font-color: white;
+}
+#sample {
+    padding: 1em;
+}
+#sample p {
+    margin-bottom: 2em;
+}
+</style>
+</head>
+<body>
+<div id="sample">
+    <p>
+        <span id="backgroundColorCoral">coral</span>
+        <span id="backgroundColorYellow">yellow</span>
+        <span id="backgroundColorSkyblue">skyblue</span>
+    </p>
+    <p>現在の背景色：<span id="backgroundColor"></span>。</p>
+</div>
+</body>
+</html>
