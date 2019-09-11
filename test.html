@@ -10,20 +10,20 @@ jQuery( function() {
     backgroundColorchange('i1');
     backgroundColorchange('i2');
     jQuery( '#i1' ).click( function () {
-	alert("click1!");
+//	alert("click1!");
         backgroundColorchange( 'i1' );
     } );
     jQuery( '#i2' ).click( function () {
-	alert("click2!");
+//	alert("click2!");
         backgroundColorchange( 'i2' );
     } );
 
 
     function backgroundColorchange( id ){
-	alert("clicked!");
-		alert(id);
+//	alert("clicked!");
+//		alert(id);
        if( backgroundColor[id] == undefined ) {
-	alert("undef");
+//	alert("undef");
             backgroundColor[id] = jQuery.cookie( id );
             if( backgroundColor[id] == undefined ){
                 backgroundColor[id] = 'white';
@@ -37,7 +37,7 @@ jQuery( function() {
         } else if (backgroundColor[id] == 'red') {
                backgroundColor[id] = 'white';
         }
-	alert(backgroundColor[id]);
+//	alert(backgroundColor[id]);
 
         jQuery.cookie( id, backgroundColor[id] , { expires: 1 } );
         jQuery( '#'+id ).css( { 'backgroundColor': backgroundColor[id] } );
