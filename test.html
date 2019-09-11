@@ -4,67 +4,62 @@
 <script src="jquery.cookie.js"></script>
 <script>
 <!--
+var backgroundColor = { i1:undefined, i2:undefined }
+
 jQuery( function() {
-    backgroundColor();
-    jQuery( '#backgroundColorCoral' ).click( function () {
-        backgroundColor( 'coral' );
+    backgroundColorchange('i1');
+    backgroundColorchange('i2');
+    jQuery( '#i1' ).click( function () {
+	alert("click1!");
+        backgroundColorchange( 'i1' );
     } );
-    jQuery( '#backgroundColorYellow' ).click( function () {
-        backgroundColor( 'yellow' );
+    jQuery( '#i2' ).click( function () {
+	alert("click2!");
+        backgroundColorchange( 'i2' );
     } );
-    jQuery( '#backgroundColorSkyblue' ).click( function () {
-        backgroundColor( 'skyblue' );
-    } );
-    function backgroundColor( $backgroundColor ){
-        if( $backgroundColor == undefined ){
-            var $backgroundColor = jQuery.cookie( 'backgroundColor' );
-            if( $backgroundColor == undefined ){
-                var $backgroundColor = 'yellow';
+
+
+    function backgroundColorchange( id ){
+	alert("clicked!");
+		alert(id);
+       if( backgroundColor[id] == undefined ) {
+	alert("undef");
+            backgroundColor[id] = jQuery.cookie( id );
+            if( backgroundColor[id] == undefined ){
+                backgroundColor[id] = 'white';
             }
+        } else if (backgroundColor[id] == 'white') {
+               backgroundColor[id] = 'yellow';
+        } else if (backgroundColor[id] == 'yellow') {
+               backgroundColor[id] = 'lightgreen';
+        } else if (backgroundColor[id] == 'lightgreen') {
+               backgroundColor[id] = 'red';
+        } else if (backgroundColor[id] == 'red') {
+               backgroundColor[id] = 'white';
         }
-        jQuery( '#backgroundColor' ).html( $backgroundColor );
-        jQuery.cookie( 'backgroundColor', $backgroundColor, { expires: 1 } );
-        jQuery( '#sample' ).css( { 'backgroundColor': $backgroundColor } );
+	alert(backgroundColor[id]);
+
+        jQuery.cookie( id, backgroundColor[id] , { expires: 1 } );
+        jQuery( '#'+id ).css( { 'backgroundColor': backgroundColor[id] } );
     }
 } );
 // -->
 </script>
 <style type="text/css">
-#backgroundColorCoral,
-#backgroundColorYellow,
-#backgroundColorSkyblue {
-    margin-right: 1em;
-    padding: 0.5em 1em;
-    border: 1px solid #666666;
-    border-radius: 5px;
-    cursor: pointer;
-}
-#backgroundColorCoral {
-    background-color: coral;
-}
-#backgroundColorYellow {
-    background-color: yellow;
-}
-#backgroundColorSkyblue {
-    background-color: skyblue;
-    font-color: white;
-}
-#sample {
-    padding: 1em;
-}
-#sample p {
-    margin-bottom: 2em;
+#i1 {
 }
 </style>
 </head>
 <body>
-<div id="sample">
-    <p>
-        <span id="backgroundColorCoral">coral</span>
-        <span id="backgroundColorYellow">yellow</span>
-        <span id="backgroundColorSkyblue">skyblue</span>
-    </p>
-    <p>現在の背景色：<span id="backgroundColor"></span>。</p>
-</div>
+<table border="1">
+<tr id="i1">
+<td> I1 I1 I1 I1 </td>
+<td> I1 I1 I1 I1 </td>
+</tr>
+<tr id="i2">
+<td> I2 I2 I2 I2 </td>
+<td> I2 I2 I2 I2 </td>
+</tr>
+</table>
 </body>
 </html>
