@@ -11,7 +11,129 @@ td.bad {font-size: 28px; background-color:pink}
 th {font-size: 28px; }
 td {font-size: 28px; }
 kotsu {bg-color: green; }
+<!--
+#i1 {
+}
+-->
 </style>
+
+<script src="jquery-3.4.1.min.js"></script>
+<script src="jquery.cookie.js"></script>
+<script>
+<!--
+var backgroundColor = {}
+
+jQuery( function() {
+	a=0;
+	ids=['i1','i2'];
+	ids.forEach( function (id) {
+		a=a+1;
+		alert(a);
+	    backgroundColorchange(id);
+	});
+
+
+    backgroundColorchange('s1');
+    backgroundColorchange('s2');
+
+    backgroundColorchange('q1');
+    backgroundColorchange('q2');
+
+    backgroundColorchange('k1');
+    backgroundColorchange('k2');
+
+    backgroundColorchange('t1');
+    backgroundColorchange('t2');
+
+    backgroundColorchange('r1');
+    backgroundColorchange('r2');
+
+    backgroundColorchange('j1');
+    backgroundColorchange('j2');
+
+    backgroundColorchange('l1');
+    backgroundColorchange('l2');
+
+    backgroundColorchange('v1');
+    backgroundColorchange('v2');
+
+    backgroundColorchange('u1');
+    backgroundColorchange('u2');
+
+    backgroundColorchange('m1');
+    backgroundColorchange('m2');
+
+    backgroundColorchange('n1');
+    backgroundColorchange('n2');
+
+    backgroundColorchange('g1');
+    backgroundColorchange('g2');
+
+    backgroundColorchange('h1');
+    backgroundColorchange('h2');
+
+    backgroundColorchange('b1');
+    backgroundColorchange('b2');
+
+    backgroundColorchange('f1');
+    backgroundColorchange('f2');
+
+    backgroundColorchange('e1');
+    backgroundColorchange('e2');
+
+    backgroundColorchange('a1');
+    backgroundColorchange('a2');
+
+    backgroundColorchange('c1');
+    backgroundColorchange('c2');
+
+    backgroundColorchange('d1');
+    backgroundColorchange('d2');
+
+    backgroundColorchange('a0');
+
+//    jQuery( '#i1' ).click( function () {
+//	alert("click1!");
+//        backgroundColorchange( 'i1' );
+//    } );
+//    jQuery( '#i2' ).click( function () {
+//        backgroundColorchange( 'i2' );
+//    } );
+//    jQuery( '#s1' ).click( function () {
+	$('.event').on('click', function(){
+//		alert($(this).data('hoge'));
+		id = $(this).data('hoge');
+        backgroundColorchange( id );
+    } );
+
+
+    function backgroundColorchange( id ){
+//	alert("clicked!");
+//		alert(id);
+       if( backgroundColor[id] == undefined ) {
+//	alert("undef");
+            backgroundColor[id] = jQuery.cookie( id );
+            if( backgroundColor[id] == undefined ){
+                backgroundColor[id] = 'white';
+            }
+        } else if (backgroundColor[id] == 'white') {
+               backgroundColor[id] = 'yellow';
+        } else if (backgroundColor[id] == 'yellow') {
+               backgroundColor[id] = 'lightgreen';
+        } else if (backgroundColor[id] == 'lightgreen') {
+               backgroundColor[id] = 'red';
+        } else if (backgroundColor[id] == 'red') {
+               backgroundColor[id] = 'white';
+        }
+//	alert(backgroundColor[id]);
+
+        jQuery.cookie( id, backgroundColor[id] , { expires: 730 } );
+//        jQuery( '#'+id ).css( { 'backgroundColor': backgroundColor[id] } );
+        jQuery( '#_'+id ).css( { 'backgroundColor': backgroundColor[id] } );
+    }
+} );
+// -->
+</script>
 </head>
 <body>
 <br>
@@ -35,58 +157,58 @@ kotsu {bg-color: green; }
 <th>考え方</th>
 <th>解説動画</th>
 </tr>
-<tr>
+<tr id="_i1">
 <td>I1</td>
-<td><img src="I1.png" width="100" height="100" alt="a0" /></td>
+<td id="i1" class="event" data-hoge="i1"><img src="I1.png" width="100" height="100"/></td>
 <td width="300" class="kihon">普通に入れる</td>
 <td width="300">基礎なので、動画の中で詳しく説明しています</td>
 <td width="60" align="center"><a href="https://www.youtube.com/watch?v=T6i8zZjbybc"><img width="50%" src="play_button.png"></a></td>
 </tr>
-<tr>
+<tr id="_i2">
 <td>I2</td>
-<td><img src="I2.png" width="100" height="100" alt="a1" /></td>
+<td id="i2" class="event" data-hoge="i2"><img src="I2.png" width="100" height="100"/></td>
 <td width="300" class="kihon">普通に入れる</td>
 <td width="300">基礎なので、動画の中で詳しく説明しています</td>
 <td width="60" align="center"><a href="https://www.youtube.com/watch?v=T6i8zZjbybc"><img width="50%" src="play_button.png"></a></td>
 </tr>
-<tr>
+<tr id="_s1">
 <td>S1</td>
-<td><img src="S1.png" width="100" height="100" alt="a2" /></td>
+<td id="s1" class="event" data-hoge="s1"><img src="S1.png" width="100" height="100"/></td>
 <td width="300" class="kotsu">３種類のコツ<br>Iからの練習パターン</td>
 <td width="300">コーナーを奥で下段にさげて、エッジを近づけてI化する</td>
 <td width="60" align="center"><a href="https://youtu.be/1XwbrYcsqm0"><img width="50%" src="play_button.png"></a></td>
 </tr>
-<tr>
+<tr id="_s2">
 <td>S2</td>
-<td><img src="S2.png" width="100" height="100" alt="b1" /></td>
+<td id="s2" class="event" data-hoge="s2"><img src="S2.png" width="100" height="100"/></td>
 <td width="300" class="kotsu">３種類のコツ<br>Iからの練習パターン</td>
 <td width="300">コーナーを奥で下段にさげて、エッジを近づけてI化する</td>
 <td width="60" align="center"><a href="https://youtu.be/w6Ejt7UGi6Y"><img width="50%" src="play_button.png"></a></td>
 </tr>
-<tr>
+<tr id="_q1">
 <td>Q1</td>
-<td><img src="Q1.png" width="100" height="100" alt="a2" /></td>
+<td id="q1" class="event" data-hoge="q1"><img src="Q1.png" width="100" height="100"/></td>
 <td width="300" class="kotsu">３種類のコツ<br>Iからの練習パターン</td>
 <td width="300">コーナーを奥で下段にさげて、エッジを近づけてI化する</td>
 <td width="60" align="center"><a href="https://youtu.be/94lR390R9p4"><img width="50%" src="play_button.png"></a></td>
 </tr>
-<tr>
+<tr id="_q2">
 <td>Q2</td>
-<td><img src="Q2.png" width="100" height="100" alt="b1" /></td>
+<td id="q2" class="event" data-hoge="q2"><img src="Q2.png" width="100" height="100"/></td>
 <td width="300" class="kotsu">３種類のコツ<br>Iからの練習パターン</td>
 <td width="300">コーナーを奥で下段にさげて、エッジを近づけてI化する</td>
 <td width="60" align="center"><a href="https://youtu.be/07Pzs8o7hv4"><img width="50%" src="play_button.png"></a></td>
 </tr>
-<tr>
+<tr id="_k1">
 <td>K1</td>
-<td><img src="K1.png" width="100" height="100" alt="a2" /></td>
+<td id="k1" class="event" data-hoge="k1"><img src="K1.png" width="100" height="100"/></td>
 <td width="300" class=""></td>
 <td width="300"></td>
 <td width="60" align="center"><img width="50%" src="non_play_button.png"></td>
 </tr>
-<tr>
+<tr id="_k2">
 <td>K2</td>
-<td><img src="K2.png" width="100" height="100" alt="b1" /></td>
+<td id="k2" class="event" data-hoge="k2"><img src="K2.png" width="100" height="100"/></td>
 <td width="300" class=""></td>
 <td width="300"></td>
 <td width="60" align="center"><img width="50%" src="non_play_button.png"></td>
@@ -104,58 +226,58 @@ kotsu {bg-color: green; }
 <th>考え方</th>
 <th>解説動画</th>
 </tr>
-<tr>
+<tr id="_t1">
 <td>T1</td>
-<td><img src="T1.png" width="100" height="100" alt="a0" /></td>
+<td id="t1" class="event" data-hoge="t1"><img src="T1.png" width="100" height="100"/></td>
 <td width="300" class="kihon">普通に入れる</td>
 <td width="300">基礎なので、動画で詳しく説明しています</td>
 <td width="60" align="center"><img width="50%" src="non_play_button.png"></td>
 </tr>
-<tr>
+<tr id="_t2">
 <td>T2</td>
-<td><img src="T2.png" width="100" height="100" alt="a1" /></td>
+<td id="t2" class="event" data-hoge="t2"><img src="T2.png" width="100" height="100"/></td>
 <td width="300" class="kihon">普通に入れる</td>
 <td width="300">基礎なので、動画で詳しく説明しています</td>
 <td width="60" align="center"><img width="50%" src="non_play_button.png"></a></td>
 </tr>
-<tr>
+<tr id="_r1">
 <td>R1</td>
-<td><img src="R1.png" width="100" height="100" alt="a2" /></td>
+<td id="r1" class="event" data-hoge="r1"><img src="R1.png" width="100" height="100"/></td>
 <td width="300" class="kotsu">Tからの練習パターン<br>３種類のコツとはコーナーの切り離す場所を左右逆にする</td>
 <td width="300">白が見えなくなる方でコーナーを下段にさげて、エッジを近づけてT化する</td>
 <td width="60" align="center"><img width="50%" src="non_play_button.png"></td>
 </tr>
-<tr>
+<tr id="_r2">
 <td>R2</td>
-<td><img src="R2.png" width="100" height="100" alt="b1" /></td>
+<td id="r2" class="event" data-hoge="r2"><img src="R2.png" width="100" height="100"/></td>
 <td width="300" class="kotsu">Tからの練習パターン<br>３種類のコツとはコーナーの切り離す場所を左右逆にする</td>
 <td width="300">白が見えなくなる方でコーナーを下段にさげて、エッジを近づけてT化する</td>
 <td width="60" align="center"><img width="50%" src="non_play_button.png"></td>
 </tr>
-<tr>
+<tr id="_j1">
 <td>J1</td>
-<td><img src="J1.png" width="100" height="100" alt="a2" /></td>
+<td id="j1" class="event" data-hoge="j1"><img src="J1.png" width="100" height="100"/></td>
 <td width="300" class=""></td>
 <td width="300"></td>
 <td width="60" align="center"><img width="50%" src="non_play_button.png"></td>
 </tr>
-<tr>
+<tr id="_j2">
 <td>J2</td>
-<td><img src="J2.png" width="100" height="100" alt="b1" /></td>
+<td id="j2" class="event" data-hoge="j2"><img src="J2.png" width="100" height="100"/></td>
 <td width="300" class=""></td>
 <td width="300"></td>
 <td width="60" align="center"><img width="50%" src="non_play_button.png"></td>
 </tr>
-<tr>
+<tr id="_l1">
 <td>L1</td>
-<td><img src="L1.png" width="100" height="100" alt="a2" /></td>
+<td id="l1" class="event" data-hoge="l1"><img src="L1.png" width="100" height="100"/></td>
 <td width="300" class="kotsu">Tからの練習パターン</td>
 <td width="300">切り離してT化する</td>
 <td width="60" align="center"><img width="50%" src="non_play_button.png"></td>
 </tr>
-<tr>
+<tr id="_l2">
 <td>L2</td>
-<td><img src="L2.png" width="100" height="100" alt="b1" /></td>
+<td id="l2" class="event" data-hoge="l2"><img src="L2.png" width="100" height="100"/></td>
 <td width="300" class="kotsu">Tからの練習パターン</td>
 <td width="300">切り離してT化する</td>
 <td width="60" align="center"><img width="50%" src="non_play_button.png"></td>
@@ -173,58 +295,58 @@ kotsu {bg-color: green; }
 <th>考え方</th>
 <th>解説動画</th>
 </tr>
-<tr>
+<tr id="_v1">
 <td>V1</td>
-<td><img src="V1.png" width="100" height="100" alt="a0" /></td>
+<td id="v1" class="event" data-hoge="v1"><img src="V1.png" width="100" height="100"/></td>
 <td width="300" class=""></td>
 <td width="300"></td>
 <td width="60" align="center"><img width="50%" src="non_play_button.png"></td>
 </tr>
-<tr>
+<tr id="_v2">
 <td>V2</td>
-<td><img src="V2.png" width="100" height="100" alt="a1" /></td>
+<td id="v2" class="event" data-hoge="v2"><img src="V2.png" width="100" height="100"/></td>
 <td width="300" class=""></td>
 <td width="300"></td>
 <td width="60" align="center"><img width="50%" src="non_play_button.png"></td>
 </tr>
-<tr>
+<tr id="_u1">
 <td>U1</td>
-<td><img src="U1.png" width="100" height="100" alt="a2" /></td>
+<td id="u1" class="event" data-hoge="u1"><img src="U1.png" width="100" height="100"/></td>
 <td width="300" class=""></td>
 <td width="300"></td>
 <td width="60" align="center"><img width="50%" src="non_play_button.png"></td>
 </tr>
-<tr>
+<tr id="_u2">
 <td>U2</td>
-<td><img src="U2.png" width="100" height="100" alt="b1" /></td>
+<td id="u2" class="event" data-hoge="u2"><img src="U2.png" width="100" height="100"/></td>
 <td width="300" class=""></td>
 <td width="300"></td>
 <td width="60" align="center"><img width="50%" src="non_play_button.png"></td>
 </tr>
-<tr>
+<tr id="_m1">
 <td>M1</td>
-<td><img src="M1.png" width="100" height="100" alt="a2" /></td>
+<td id="m1" class="event" data-hoge="m1"><img src="M1.png" width="100" height="100"/></td>
 <td width="300" class=""></td>
 <td width="300"></td>
 <td width="60" align="center"><img width="50%" src="non_play_button.png"></td>
 </tr>
-<tr>
+<tr id="_m2">
 <td>M2</td>
-<td><img src="M2.png" width="100" height="100" alt="b1" /></td>
+<td id="m2" class="event" data-hoge="m2"><img src="M2.png" width="100" height="100"/></td>
 <td width="300" class=""></td>
 <td width="300"></td>
 <td width="60" align="center"><img width="50%" src="non_play_button.png"></td>
 </tr>
-<tr>
+<tr id="_n1">
 <td>N1</td>
-<td><img src="N1.png" width="100" height="100" alt="a2" /></td>
+<td id="n1" class="event" data-hoge="n1"><img src="N1.png" width="100" height="100"/></td>
 <td width="300" class=""></td>
 <td width="300"></td>
 <td width="60" align="center"><img width="50%" src="non_play_button.png"></td>
 </tr>
-<tr>
+<tr id="_n2">
 <td>N2</td>
-<td><img src="N2.png" width="100" height="100" alt="b1" /></td>
+<td id="n2" class="event" data-hoge="n2"><img src="N2.png" width="100" height="100"/></td>
 <td width="300" class=""></td>
 <td width="300"></td>
 <td width="60" align="center"><img width="50%" src="non_play_button.png"></td>
@@ -243,44 +365,44 @@ kotsu {bg-color: green; }
 <th>考え方</th>
 <th>解説動画</th>
 </tr>
-<tr>
+<tr id="_g1">
 <td>G1</td>
-<td><img src="G1.png" width="100" height="100" alt="a0" /></td>
+<td id="g1" class="event" data-hoge="g1"><img src="G1.png" width="100" height="100"/></td>
 <td width="300" class="kotsu">T,Iからの練習パターン</td>
 <td width="300">持つ向きによりT化とI化をやりわける</td>
 <td width="60" align="center"><img width="50%" src="non_play_button.png"></td>
 </tr>
-<tr>
+<tr id="_g2">
 <td>G2</td>
-<td><img src="G2.png" width="100" height="100" alt="a1" /></td>
+<td id="g2" class="event" data-hoge="g2"><img src="G2.png" width="100" height="100"/></td>
 <td width="300" class="kotsu">T,Iからの練習パターン</td>
 <td width="300">持つ向きによりT化とI化をやりわける</td>
 <td width="60" align="center"><img width="50%" src="non_play_button.png"></td>
 </tr>
-<tr>
+<tr id="_h1">
 <td>H1</td>
-<td><img src="H1.png" width="100" height="100" alt="a2" /></td>
+<td id="h1" class="event" data-hoge="h1"><img src="H1.png" width="100" height="100"/></td>
 <td width="300" class=""></td>
 <td width="300"></td>
 <td width="60" align="center"><img width="50%" src="non_play_button.png"></td>
 </tr>
-<tr>
+<tr id="_h2">
 <td>H2</td>
-<td><img src="H2.png" width="100" height="100" alt="b1" /></td>
+<td id="h2" class="event" data-hoge="h2"><img src="H2.png" width="100" height="100"/></td>
 <td width="300" class=""></td>
 <td width="300"></td>
 <td width="60" align="center"><img width="50%" src="non_play_button.png"></td>
 </tr>
-<tr>
+<tr id="_b1">
 <td>B1</td>
-<td><img src="B1.png" width="100" height="100" alt="a2" /></td>
+<td id="b1" class="event" data-hoge="b1"><img src="B1.png" width="100" height="100"/></td>
 <td width="300" class=""></td>
 <td width="300"></td>
 <td width="60" align="center"><img width="50%" src="non_play_button.png"></td>
 </tr>
-<tr>
+<tr id="_b2">
 <td>B2</td>
-<td><img src="B2.png" width="100" height="100" alt="b1" /></td>
+<td id="b2" class="event" data-hoge="b2"><img src="B2.png" width="100" height="100"/></td>
 <td width="300" class=""></td>
 <td width="300"></td>
 <td width="60" align="center"><img width="50%" src="non_play_button.png"></td>
@@ -298,44 +420,44 @@ kotsu {bg-color: green; }
 <th>考え方</th>
 <th>解説動画</th>
 </tr>
-<tr>
+<tr id="_f1">
 <td>F1</td>
-<td><img src="F1.png" width="100" height="100" alt="a0" /></td>
+<td id="f1" class="event" data-hoge="f1"><img src="F1.png" width="100" height="100"/></td>
 <td width="300" class=""></td>
 <td width="300"></td>
 <td width="60" align="center"><img width="50%" src="non_play_button.png"></td>
 </tr>
-<tr>
+<tr id="_f2">
 <td>F2</td>
-<td><img src="F2.png" width="100" height="100" alt="a1" /></td>
+<td id="f2" class="event" data-hoge="f2"><img src="F2.png" width="100" height="100"/></td>
 <td width="300" class=""></td>
 <td width="300"></td>
 <td width="60" align="center"><img width="50%" src="non_play_button.png"></td>
 </tr>
-<tr>
+<tr id="_e1">
 <td>E1</td>
-<td><img src="E1.png" width="100" height="100" alt="a2" /></td>
+<td id="e1" class="event" data-hoge="e1"><img src="E1.png" width="100" height="100"/></td>
 <td width="300" class=""></td>
 <td width="300"></td>
 <td width="60" align="center"><img width="50%" src="non_play_button.png"></td>
 </tr>
-<tr>
+<tr id="_e2">
 <td>E2</td>
-<td><img src="E2.png" width="100" height="100" alt="b1" /></td>
+<td id="e2" class="event" data-hoge="e2"><img src="E2.png" width="100" height="100"/></td>
 <td width="300" class=""></td>
 <td width="300"></td>
 <td width="60" align="center"><img width="50%" src="non_play_button.png"></td>
 </tr>
-<tr>
+<tr id="_a1">
 <td>A1</td>
-<td><img src="A1.png" width="100" height="100" alt="a2" /></td>
+<td id="a1" class="event" data-hoge="a1"><img src="A1.png" width="100" height="100"/></td>
 <td width="300" class=""></td>
 <td width="300"></td>
 <td width="60" align="center"><img width="50%" src="non_play_button.png"></td>
 </tr>
-<tr>
+<tr id="_a2">
 <td>A2</td>
-<td><img src="A2.png" width="100" height="100" alt="b1" /></td>
+<td id="a2" class="event" data-hoge="a2"><img src="A2.png" width="100" height="100"/></td>
 <td width="300" class=""></td>
 <td width="300"></td>
 <td width="60" align="center"><img width="50%" src="non_play_button.png"></td>
@@ -353,37 +475,37 @@ kotsu {bg-color: green; }
 <th>考え方</th>
 <th>解説動画</th>
 </tr>
-<tr>
+<tr id="_c1">
 <td>C1</td>
-<td><img src="C1.png" width="100" height="100" alt="a0" /></td>
+<td id="c1" class="event" data-hoge="c1"><img src="C1.png" width="100" height="100"/></td>
 <td width="300" class=""></td>
 <td width="300"></td>
 <td width="60" align="center"><img width="50%" src="non_play_button.png"></td>
 </tr>
-<tr>
+<tr id="_c2">
 <td>C2</td>
-<td><img src="C2.png" width="100" height="100" alt="a1" /></td>
+<td id="c2" class="event" data-hoge="c2"><img src="C2.png" width="100" height="100"/></td>
 <td width="300" class=""></td>
 <td width="300"></td>
 <td width="60" align="center"><img width="50%" src="non_play_button.png"></td>
 </tr>
-<tr>
+<tr id="_d1">
 <td>D1</td>
-<td><img src="D1.png" width="100" height="100" alt="a2" /></td>
+<td id="d1" class="event" data-hoge="d1"><img src="D1.png" width="100" height="100"/></td>
 <td width="300" class=""></td>
 <td width="300"></td>
 <td width="60" align="center"><img width="50%" src="non_play_button.png"></td>
 </tr>
-<tr>
+<tr id="_d2">
 <td>D2</td>
-<td><img src="D2.png" width="100" height="100" alt="b1" /></td>
+<td id="d2" class="event" data-hoge="d2"><img src="D2.png" width="100" height="100"/></td>
 <td width="300" class=""></td>
 <td width="300"></td>
 <td width="60" align="center"><img width="50%" src="non_play_button.png"></td>
 </tr>
-<tr>
+<tr id="_a0">
 <td>A0</td>
-<td><img src="M1.png" width="100" height="100" alt="a2" /></td>
+<td id="a0" class="event" data-hoge="a0"><img src="A0.png" width="100" height="100"/></td>
 <td width="300" class=""></td>
 <td width="300"></td>
 <td width="60" align="center"><img width="50%" src="non_play_button.png"></td>
