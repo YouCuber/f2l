@@ -11,10 +11,6 @@ td.bad {font-size: 28px; background-color:pink}
 th {font-size: 28px; }
 td {font-size: 28px; }
 kotsu {bg-color: green; }
-<!--
-#i1 {
-}
--->
 </style>
 
 <script src="jquery-3.4.1.min.js"></script>
@@ -25,72 +21,35 @@ var backgroundColor = {}
 
 jQuery( function() {
 	a=0;
-	ids=['i1','i2'];
+	ids=[
+			'i1','i2',
+			's1','s2',
+			'q1','q2',
+			'k1','k2',
+			't1','t2',
+			'r1','r2',
+			'j1','j2',
+			'l1','l2',
+			'v1','v2',
+			'u1','u2',
+			'm1','m2',
+			'n1','n2',
+			'g1','g2',
+			'h1','h2',
+			'b1','b2',
+			'f1','f2',
+			'e1','e2',
+			'a1','a2',
+			'c1','c2',
+			'd1','d2',
+			'a0'
+		];
 	ids.forEach( function (id) {
 		a=a+1;
-//		alert(a);
 	    backgroundColorchange(id);
 	});
+//	alert(a);
 
-
-    backgroundColorchange('s1');
-    backgroundColorchange('s2');
-
-    backgroundColorchange('q1');
-    backgroundColorchange('q2');
-
-    backgroundColorchange('k1');
-    backgroundColorchange('k2');
-
-    backgroundColorchange('t1');
-    backgroundColorchange('t2');
-
-    backgroundColorchange('r1');
-    backgroundColorchange('r2');
-
-    backgroundColorchange('j1');
-    backgroundColorchange('j2');
-
-    backgroundColorchange('l1');
-    backgroundColorchange('l2');
-
-    backgroundColorchange('v1');
-    backgroundColorchange('v2');
-
-    backgroundColorchange('u1');
-    backgroundColorchange('u2');
-
-    backgroundColorchange('m1');
-    backgroundColorchange('m2');
-
-    backgroundColorchange('n1');
-    backgroundColorchange('n2');
-
-    backgroundColorchange('g1');
-    backgroundColorchange('g2');
-
-    backgroundColorchange('h1');
-    backgroundColorchange('h2');
-
-    backgroundColorchange('b1');
-    backgroundColorchange('b2');
-
-    backgroundColorchange('f1');
-    backgroundColorchange('f2');
-
-    backgroundColorchange('e1');
-    backgroundColorchange('e2');
-
-    backgroundColorchange('a1');
-    backgroundColorchange('a2');
-
-    backgroundColorchange('c1');
-    backgroundColorchange('c2');
-
-    backgroundColorchange('d1');
-    backgroundColorchange('d2');
-
-    backgroundColorchange('a0');
 
 //    jQuery( '#i1' ).click( function () {
 //	alert("click1!");
@@ -368,43 +327,43 @@ jQuery( function() {
 <tr id="_g1">
 <td>G1</td>
 <td id="g1" class="event" data-hoge="g1"><img src="G1.png" width="100" height="100"/></td>
-<td width="300" class="kotsu">T,Iからの練習パターン</td>
-<td width="300">持つ向きによりT化とI化をやりわける</td>
+<td width="300" class="kotsu">Iからの練習パターン<br>Tからの練習パターン<br>側面に縦に同色がある場合はI化もできる</td>
+<td width="300">コーナーの白が手前ならI化<br>それ以外はT化<br>詳細は動画内で</td>
 <td width="60" align="center"><img width="50%" src="non_play_button.png"></td>
 </tr>
 <tr id="_g2">
 <td>G2</td>
 <td id="g2" class="event" data-hoge="g2"><img src="G2.png" width="100" height="100"/></td>
-<td width="300" class="kotsu">T,Iからの練習パターン</td>
-<td width="300">持つ向きによりT化とI化をやりわける</td>
+<td width="300" class="kotsu">Iからの練習パターン<br>Tからの練習パターン<br>側面に縦に同色がある場合はI化もできる</td>
+<td width="300">コーナーの白が手前ならI化<br>それ以外はT化<br>詳細は動画内で</td>
 <td width="60" align="center"><img width="50%" src="non_play_button.png"></td>
 </tr>
 <tr id="_h1">
 <td>H1</td>
 <td id="h1" class="event" data-hoge="h1"><img src="H1.png" width="100" height="100"/></td>
-<td width="300" class=""></td>
-<td width="300"></td>
+<td width="300" class="">側面に縦に同色がない場合はI化はできない</td>
+<td width="300">コーナーの白面を前にして奥でT化</td>
 <td width="60" align="center"><img width="50%" src="non_play_button.png"></td>
 </tr>
 <tr id="_h2">
 <td>H2</td>
 <td id="h2" class="event" data-hoge="h2"><img src="H2.png" width="100" height="100"/></td>
-<td width="300" class=""></td>
-<td width="300"></td>
+<td width="300" class="">側面に縦に同色がない場合はI化はできない</td>
+<td width="300">コーナーの白面を前にして奥でT化</td>
 <td width="60" align="center"><img width="50%" src="non_play_button.png"></td>
 </tr>
 <tr id="_b1">
 <td>B1</td>
 <td id="b1" class="event" data-hoge="b1"><img src="B1.png" width="100" height="100"/></td>
-<td width="300" class=""></td>
-<td width="300"></td>
+<td width="300" class="">特殊アルゴリズム</td>
+<td width="300">セクシームーブ×３</td>
 <td width="60" align="center"><img width="50%" src="non_play_button.png"></td>
 </tr>
 <tr id="_b2">
 <td>B2</td>
 <td id="b2" class="event" data-hoge="b2"><img src="B2.png" width="100" height="100"/></td>
-<td width="300" class=""></td>
-<td width="300"></td>
+<td width="300" class="">すでにI化している</td>
+<td width="300">一旦抜いてIとして入れる</td>
 <td width="60" align="center"><img width="50%" src="non_play_button.png"></td>
 </tr>
 </table>
