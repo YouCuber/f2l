@@ -1,0 +1,617 @@
+<html>
+<head>
+<title>F2L</title>
+<meta http-equiv="Content-Type" content="text/html; charset=shift_jis">
+<style>
+td.kihon {font-size: 28px; background-color:green}
+td.kotsu {font-size: 28px; background-color:lightgreen}
+td.alg {font-size: 28px; background-color:yellow}
+td.new {font-size: 28px; background-color:lightblue}
+td.bad {font-size: 28px; background-color:pink}
+th {font-size: 28px; }
+td {font-size: 28px; }
+kotsu {bg-color: green; }
+</style>
+
+<script src="jquery-3.4.1.min.js"></script>
+<script src="jquery.cookie.js"></script>
+<script>
+<!--
+var backgroundColor = {}
+
+jQuery( function() {
+	a=0;
+	ids=[
+			'i1','i2',
+			's1','s2',
+			'q1','q2',
+			'k1','k2',
+			't1','t2',
+			'r1','r2',
+			'j1','j2',
+			'l1','l2',
+			'v1','v2',
+			'u1','u2',
+			'm1','m2',
+			'n1','n2',
+			'g1','g2',
+			'h1','h2',
+			'b1','b2',
+			'f1','f2',
+			'e1','e2',
+			'a1','a2',
+			'c1','c2',
+			'd1','d2',
+			'a0'
+		];
+	ids.forEach( function (id) {
+		a=a+1;
+	    backgroundColorchange(id);
+	});
+//	alert(a);
+
+
+//    jQuery( '#i1' ).click( function () {
+//	alert("click1!");
+//        backgroundColorchange( 'i1' );
+//    } );
+//    jQuery( '#i2' ).click( function () {
+//        backgroundColorchange( 'i2' );
+//    } );
+//    jQuery( '#s1' ).click( function () {
+	$('.event').on('click', function(){
+//		alert($(this).data('hoge'));
+		id = $(this).data('hoge');
+        backgroundColorchange( id );
+    } );
+
+
+    function backgroundColorchange( id ){
+//	alert("clicked!");
+//		alert(id);
+       if( backgroundColor[id] == undefined ) {
+//	alert("undef");
+            backgroundColor[id] = jQuery.cookie( id );
+            if( backgroundColor[id] == undefined ){
+                backgroundColor[id] = 'white';
+            }
+        } else if (backgroundColor[id] == 'white') {
+               backgroundColor[id] = 'yellow';
+        } else if (backgroundColor[id] == 'yellow') {
+               backgroundColor[id] = 'lightgreen';
+        } else if (backgroundColor[id] == 'lightgreen') {
+               backgroundColor[id] = 'red';
+        } else if (backgroundColor[id] == 'red') {
+               backgroundColor[id] = 'white';
+        }
+//	alert(backgroundColor[id]);
+
+        jQuery.cookie( id, backgroundColor[id] , { expires: 730 } );
+//        jQuery( '#'+id ).css( { 'backgroundColor': backgroundColor[id] } );
+        jQuery( '#_'+id ).css( { 'backgroundColor': backgroundColor[id] } );
+    }
+} );
+// -->
+</script>
+</head>
+<body>
+<br>
+<br>
+<br>
+<div align="center">
+
+<Font size = "+5"><b>Ｆ２Ｌ</b></font>
+<br>
+<Font size = "+3"><a href="index.html">F2Lの分類チャートはこちら</a></font>
+<h1>分類１：コーナーとエッジが上面にある</h1>
+
+<h2>１－１：エッジとコーナーの上面の色が同じ</h2>
+
+<table style="border-collapse: collapse;" border="1">
+<tbody>
+<tr>
+<th width="10">呼称</th>
+<th width="100">画像</th>
+<th width="300">パターン</th>
+<th width="300">考え方</th>
+<th width="120">解説動画</th>
+<th width="120">アニメ</th>
+</tr>
+<tr id="_i1">
+<td>I1</td>
+<td id="i1" class="event" data-hoge="i1"><img src="I1.png" width="100" height="100"/></td>
+<td width="300" class="kihon">普通に入れる</td>
+<td width="300">基礎なので、動画の中で詳しく説明しています</td>
+<td align="center"><a href="https://www.youtube.com/watch?v=T6i8zZjbybc"><img width="50%" src="play_button.png"></a></td>
+<td align="left">
+<a href="https://youcuber.github.io/tools/alg.cubing.net-2018-12-16/?view=fullscreen&type=alg&stage=F2L&alg=y_U-_L-_U_L">左</a>
+</td>
+</tr>
+<tr id="_i2">
+<td>I2</td>
+<td id="i2" class="event" data-hoge="i2"><img src="I2.png" width="100" height="100"/></td>
+<td class="kihon">普通に入れる</td>
+<td width="300">基礎なので、動画の中で詳しく説明しています</td>
+<td align="center"><a href="https://www.youtube.com/watch?v=T6i8zZjbybc"><img width="50%" src="play_button.png"></a></td>
+<td align="left">
+<a href="https://youcuber.github.io/tools/alg.cubing.net-2018-12-16/?view=fullscreen&type=alg&stage=F2L&alg=U_R_U-_R-">右</a>
+</td>
+</tr>
+<tr id="_s1">
+<td>S1</td>
+<td id="s1" class="event" data-hoge="s1"><img src="S1.png" width="100" height="100"/></td>
+<td width="300" class="kotsu">３種類のコツ<br>Iからの練習パターン</td>
+<td width="300">コーナーを奥で下段にさげて、エッジを近づけてI化する</td>
+<td align="center"><a href="https://youtu.be/1XwbrYcsqm0"><img width="50%" src="play_button.png"></a></td>
+<td align="left">
+<a href="https://youcuber.github.io/tools/alg.cubing.net-2018-12-16/?view=fullscreen&type=alg&stage=F2L&alg=y_U_L-_U2_L_U2-_L-_U_L">右</a>
+</td>
+</tr>
+<tr id="_s2">
+<td>S2</td>
+<td id="s2" class="event" data-hoge="s2"><img src="S2.png" width="100" height="100"/></td>
+<td width="300" class="kotsu">３種類のコツ<br>Iからの練習パターン</td>
+<td width="300">コーナーを奥で下段にさげて、エッジを近づけてI化する</td>
+<td align="center"><a href="https://youtu.be/w6Ejt7UGi6Y"><img width="50%" src="play_button.png"></a></td>
+<td align="left">
+<a href="https://youcuber.github.io/tools/alg.cubing.net-2018-12-16/?view=fullscreen&type=alg&stage=F2L&alg=U-_R_U2_R-_U2_R_U-_R-">左</a>
+</td>
+</tr>
+<tr id="_q1">
+<td>Q1</td>
+<td id="q1" class="event" data-hoge="q1"><img src="Q1.png" width="100" height="100"/></td>
+<td width="300" class="kotsu">３種類のコツ<br>Iからの練習パターン</td>
+<td width="300">コーナーを奥で下段にさげて、エッジを近づけてI化する</td>
+<td width="60" align="center"><a href="https://youtu.be/94lR390R9p4"><img width="50%" src="play_button.png"></a></td>
+<td align="left">
+<a href="https://youcuber.github.io/tools/alg.cubing.net-2018-12-16/?view=fullscreen&type=alg&stage=F2L&alg=y_U_L-_U-_L_U2-_L-_U_L">右</a>
+</td>
+</tr>
+</tr>
+<tr id="_q2">
+<td>Q2</td>
+<td id="q2" class="event" data-hoge="q2"><img src="Q2.png" width="100" height="100"/></td>
+<td width="300" class="kotsu">３種類のコツ<br>Iからの練習パターン</td>
+<td width="300">コーナーを奥で下段にさげて、エッジを近づけてI化する</td>
+<td align="center"><a href="https://youtu.be/07Pzs8o7hv4"><img width="50%" src="play_button.png"></a></td>
+<td align="left">
+<a href="https://youcuber.github.io/tools/alg.cubing.net-2018-12-16/?view=fullscreen&type=alg&stage=F2L&alg=U-_R_U_R-_U2_R_U-_R-">左</a>
+</td>
+</tr>
+<tr id="_k1">
+<td>K1</td>
+<td id="k1" class="event" data-hoge="k1"><img src="K1.png" width="100" height="100"/></td>
+<td width="300" class=""></td>
+<td width="300"></td>
+<td align="center"><img width="50%" src="non_play_button.png"></td>
+<td align="left">
+アニメ
+</td>
+</tr>
+<tr id="_k2">
+<td>K2</td>
+<td id="k2" class="event" data-hoge="k2"><img src="K2.png" width="100" height="100"/></td>
+<td width="300" class=""></td>
+<td width="300"></td>
+<td align="center"><img width="50%" src="non_play_button.png"></td>
+<td align="left">
+アニメ
+</td>
+</tr>
+</table>
+
+<h2>１－２：エッジとコーナーの上面の色が違う</h2>
+
+<table style="border-collapse: collapse;" border="1">
+<tbody>
+<tr>
+<th width="10">呼称</th>
+<th width="100">画像</th>
+<th width="300">パターン</th>
+<th width="300">考え方</th>
+<th width="120">解説動画</th>
+<th width="120">アニメ</th>
+</tr>
+<tr id="_t1">
+<td width="10">T1</td>
+<td id="t1" class="event" data-hoge="t1"><img src="T1.png" width="100" height="100"/></td>
+<td width="300" class="kihon">普通に入れる</td>
+<td width="300">基礎なので、動画で詳しく説明しています</td>
+<td align="center"><img width="50%" src="non_play_button.png"></td>
+<td align="left">
+アニメ
+</td>
+</tr>
+<tr id="_t2">
+<td>T2</td>
+<td id="t2" class="event" data-hoge="t2"><img src="T2.png" width="100" height="100"/></td>
+<td width="300" class="kihon">普通に入れる</td>
+<td width="300">基礎なので、動画で詳しく説明しています</td>
+<td align="center"><img width="50%" src="non_play_button.png"></a></td>
+<td align="left">
+アニメ
+</td>
+</tr>
+<tr id="_r1">
+<td>R1</td>
+<td id="r1" class="event" data-hoge="r1"><img src="R1.png" width="100" height="100"/></td>
+<td width="300" class="kotsu">Tからの練習パターン<br>３種類のコツとはコーナーの切り離す場所を左右逆にする</td>
+<td width="300">白が見えなくなる方でコーナーを下段にさげて、エッジを近づけてT化する</td>
+<td align="center"><img width="50%" src="non_play_button.png"></td>
+<td align="left">
+アニメ
+</td>
+</tr>
+<tr id="_r2">
+<td>R2</td>
+<td id="r2" class="event" data-hoge="r2"><img src="R2.png" width="100" height="100"/></td>
+<td width="300" class="kotsu">Tからの練習パターン<br>３種類のコツとはコーナーの切り離す場所を左右逆にする</td>
+<td width="300">白が見えなくなる方でコーナーを下段にさげて、エッジを近づけてT化する</td>
+<td align="center"><img width="50%" src="non_play_button.png"></td>
+<td align="left">
+アニメ
+</td>
+</tr>
+<tr id="_j1">
+<td>J1</td>
+<td id="j1" class="event" data-hoge="j1"><img src="J1.png" width="100" height="100"/></td>
+<td width="300" class=""></td>
+<td width="300"></td>
+<td align="center"><img width="50%" src="non_play_button.png"></td>
+<td align="left">
+アニメ
+</td>
+</tr>
+<tr id="_j2">
+<td>J2</td>
+<td id="j2" class="event" data-hoge="j2"><img src="J2.png" width="100" height="100"/></td>
+<td width="300" class=""></td>
+<td width="300"></td>
+<td align="center"><img width="50%" src="non_play_button.png"></td>
+<td align="left">
+アニメ
+</td>
+</tr>
+<tr id="_l1">
+<td>L1</td>
+<td id="l1" class="event" data-hoge="l1"><img src="L1.png" width="100" height="100"/></td>
+<td width="300" class="kotsu">Tからの練習パターン</td>
+<td width="300">切り離してT化する</td>
+<td align="center"><img width="50%" src="non_play_button.png"></td>
+<td align="left">
+アニメ
+</td>
+</tr>
+<tr id="_l2">
+<td>L2</td>
+<td id="l2" class="event" data-hoge="l2"><img src="L2.png" width="100" height="100"/></td>
+<td width="300"class="kotsu">Tからの練習パターン</td>
+<td width="300">切り離してT化する</td>
+<td align="center"><img width="50%" src="non_play_button.png"></td>
+<td align="left">
+アニメ
+</td>
+</tr>
+</table>
+
+<h2>１－３：コーナーの白が上面</h2>
+
+<table style="border-collapse: collapse;" border="1">
+<tbody>
+<tr>
+<th width="10">呼称</th>
+<th width="100">画像</th>
+<th width="300">パターン</th>
+<th width="300">考え方</th>
+<th width="120">解説動画</th>
+<th width="120">アニメ</th>
+</tr>
+<tr id="_v1">
+<td>V1</td>
+<td id="v1" class="event" data-hoge="v1"><img src="V1.png" width="100" height="100"/></td>
+<td width="300" class=""></td>
+<td width="300"></td>
+<td align="center"><img width="50%" src="non_play_button.png"></td>
+<td align="left">
+アニメ
+</td>
+</tr>
+<tr id="_v2">
+<td>V2</td>
+<td id="v2" class="event" data-hoge="v2"><img src="V2.png" width="100" height="100"/></td>
+<td width="300" class=""></td>
+<td width="300"></td>
+<td align="center"><img width="50%" src="non_play_button.png"></td>
+<td align="left">
+アニメ
+</td>
+</tr>
+<tr id="_u1">
+<td>U1</td>
+<td id="u1" class="event" data-hoge="u1"><img src="U1.png" width="100" height="100"/></td>
+<td width="300" class=""></td>
+<td width="300"></td>
+<td align="center"><img width="50%" src="non_play_button.png"></td>
+<td align="left">
+アニメ
+</td>
+</tr>
+<tr id="_u2">
+<td>U2</td>
+<td id="u2" class="event" data-hoge="u2"><img src="U2.png" width="100" height="100"/></td>
+<td width="300" class=""></td>
+<td width="300"></td>
+<td align="center"><img width="50%" src="non_play_button.png"></td>
+<td align="left">
+アニメ
+</td>
+</tr>
+<tr id="_m1">
+<td>M1</td>
+<td id="m1" class="event" data-hoge="m1"><img src="M1.png" width="100" height="100"/></td>
+<td width="300" class=""></td>
+<td width="300"></td>
+<td align="center"><img width="50%" src="non_play_button.png"></td>
+<td align="left">
+アニメ
+</td>
+</tr>
+<tr id="_m2">
+<td>M2</td>
+<td id="m2" class="event" data-hoge="m2"><img src="M2.png" width="100" height="100"/></td>
+<td width="300" class=""></td>
+<td width="300"></td>
+<td align="center"><img width="50%" src="non_play_button.png"></td>
+<td align="left">
+アニメ
+</td>
+</tr>
+<tr id="_n1">
+<td>N1</td>
+<td id="n1" class="event" data-hoge="n1"><img src="N1.png" width="100" height="100"/></td>
+<td width="300" class=""></td>
+<td width="300"></td>
+<td align="center"><img width="50%" src="non_play_button.png"></td>
+<td align="left">
+アニメ
+</td>
+</tr>
+<tr id="_n2">
+<td>N2</td>
+<td id="n2" class="event" data-hoge="n2"><img src="N2.png" width="100" height="100"/></td>
+<td width="300" class=""></td>
+<td width="300"></td>
+<td align="center"><img width="50%" src="non_play_button.png"></td>
+<td align="left">
+アニメ
+</td>
+</tr>
+</table>
+
+<h1>分類２：コーナーとエッジの片方が正しいスロットに入っている</h1>
+<h2>２－１：エッジが正しいスロットに入っている</h2>
+
+<table style="border-collapse: collapse;" border="1">
+<tbody>
+<tr>
+<th width="10">呼称</th>
+<th width="100">画像</th>
+<th width="300">パターン</th>
+<th width="300">考え方</th>
+<th width="120">解説動画</th>
+<th width="120">アニメ</th>
+</tr>
+<tr id="_g1">
+<td>G1</td>
+<td id="g1" class="event" data-hoge="g1"><img src="G1.png" width="100" height="100"/></td>
+<td width="300" class="kotsu">Iからの練習パターン<br>Tからの練習パターン<br>側面に縦に同色がある場合はI化もできる</td>
+<td width="300">コーナーの白が手前ならI化<br>それ以外はT化<br>詳細は動画内で</td>
+<td align="center"><img width="50%" src="non_play_button.png"></td>
+<td align="left">
+<a href="https://youcuber.github.io/tools/alg.cubing.net-2018-12-16/?view=fullscreen&type=alg&stage=F2L&alg=y_U_L-_U_L_U2_L-_U_L">左</a><br>
+<a href="https://youcuber.github.io/tools/alg.cubing.net-2018-12-16/?view=fullscreen&type=alg&stage=F2L&alg=U_R_U_R-_U2-_R_U_R-&setup=y-">右１◎</a><br>
+<a href="https://youcuber.github.io/tools/alg.cubing.net-2018-12-16/?view=fullscreen&type=alg&stage=F2L&alg=U-_R_U2_R-_U_R_U_R-&setup=y-">右２△</a><br>
+</td>
+</tr>
+<tr id="_g2">
+<td>G2</td>
+<td id="g2" class="event" data-hoge="g2"><img src="G2.png" width="100" height="100"/></td>
+<td width="300" class="kotsu">Iからの練習パターン<br>Tからの練習パターン<br>側面に縦に同色がある場合はI化もできる</td>
+<td width="300">コーナーの白が手前ならI化<br>それ以外はT化<br>詳細は動画内で</td>
+<td align="center"><img width="50%" src="non_play_button.png"></td>
+<td align="left">
+<a href="https://youcuber.github.io/tools/alg.cubing.net-2018-12-16/?view=fullscreen&type=alg&stage=F2L&alg=U-_R_U-_R-_U2_R_U-_R-">右</a><br>
+<a href="https://youcuber.github.io/tools/alg.cubing.net-2018-12-16/?view=fullscreen&type=alg&stage=F2L&alg=y_U-_L-_U-_L_U2_L-_U-_L&setup=y">左１◎</a><br>
+<a href="https://youcuber.github.io/tools/alg.cubing.net-2018-12-16/?view=fullscreen&type=alg&stage=F2L&alg=y_U_L-_U2_L_U-_L-_U-_L&setup=y">左２△</a><br>
+</td>
+</tr>
+<tr id="_h1">
+<td>H1</td>
+<td id="h1" class="event" data-hoge="h1"><img src="H1.png" width="100" height="100"/></td>
+<td width="300" class="">側面に縦に同色がない場合はI化はできない</td>
+<td width="300">コーナーの白面を前にしてT化</td>
+<td align="center"><img width="50%" src="non_play_button.png"></td>
+<td align="left">
+<a href="https://youcuber.github.io/tools/alg.cubing.net-2018-12-16/?view=fullscreen&type=alg&stage=F2L&alg=y_U_L-_U-_L_U-_y-_R_U_R-&setup=y-">左</a><br>
+<a href="https://youcuber.github.io/tools/alg.cubing.net-2018-12-16/?view=fullscreen&type=alg&stage=F2L&alg=y_U_L-_U-_L_d-_L_U_L-&setup=y">左(裏）</a><br>
+</td>
+</tr>
+<tr id="_h2">
+<td>H2</td>
+<td id="h2" class="event" data-hoge="h2"><img src="H2.png" width="100" height="100"/></td>
+<td width="300" class="">側面に縦に同色がない場合はI化はできない</td>
+<td width="300">コーナーの白面を前にしてT化</td>
+<td align="center"><img width="50%" src="non_play_button.png"></td>
+<td align="left">
+<a href="https://youcuber.github.io/tools/alg.cubing.net-2018-12-16/?view=fullscreen&type=alg&stage=F2L&alg=U-_R_U_R-_U_y_L-_U-_L&setup=y">右</a><br>
+<a href="https://youcuber.github.io/tools/alg.cubing.net-2018-12-16/?view=fullscreen&type=alg&stage=F2L&alg=U-_R_U_R-_d_R-_U-_R&setup=y-">右(裏）</a><br>
+</td>
+</tr>
+<tr id="_b1">
+<td>B1</td>
+<td id="b1" class="event" data-hoge="b1"><img src="B1.png" width="100" height="100"/></td>
+<td width="300" class="">特殊アルゴリズム</td>
+<td width="300">セクシームーブ×３</td>
+<td align="center"><img width="50%" src="non_play_button.png"></td>
+<td align="left">
+<a href="https://youcuber.github.io/tools/alg.cubing.net-2018-12-16/?view=fullscreen&type=alg&stage=F2L&alg=(R_U_R-_U-_)2_R_U_R-">右</a><br>
+<a href="https://youcuber.github.io/tools/alg.cubing.net-2018-12-16/?view=fullscreen&type=alg&stage=F2L&alg=y(L-_U-_L_U)2_L-_U-_L&setup=y">左</a><br>
+</td>
+</tr>
+<tr id="_b2">
+<td>B2</td>
+<td id="b2" class="event" data-hoge="b2"><img src="B2.png" width="100" height="100"/></td>
+<td width="300" class="">すでにI化している</td>
+<td width="300">一旦抜いてIとして入れる</td>
+<td align="center"><img width="50%" src="non_play_button.png"></td>
+<td align="left">
+<a href="https://youcuber.github.io/tools/alg.cubing.net-2018-12-16/?view=fullscreen&type=alg&stage=F2L&alg=R_U-_R-_y_L-_U2_L&setup=y">右</a><br>
+<a href="https://youcuber.github.io/tools/alg.cubing.net-2018-12-16/?view=fullscreen&type=alg&stage=F2L&alg=U-_(R-_F_R_F-)_R_U-_R-">持替なし</a><br>
+</td>
+</tr>
+</table>
+
+<h2>２－２：コーナーが正しいスロットに入っている</h2>
+
+<table style="border-collapse: collapse;" border="1">
+<tbody>
+<tr>
+<th width="10">呼称</th>
+<th width="100">画像</th>
+<th width="300">パターン</th>
+<th width="300">考え方</th>
+<th width="120">解説動画</th>
+<th width="120">アニメ</th>
+</tr>
+<tr id="_f1">
+<td>F1</td>
+<td id="f1" class="event" data-hoge="f1"><img src="F1.png" width="100" height="100"/></td>
+<td width="300" class=""></td>
+<td width="300"></td>
+<td align="center"><img width="50%" src="non_play_button.png"></td>
+<td align="left">
+アニメ
+</td>
+</tr>
+<tr id="_f2">
+<td>F2</td>
+<td id="f2" class="event" data-hoge="f2"><img src="F2.png" width="100" height="100"/></td>
+<td width="300" class=""></td>
+<td width="300"></td>
+<td align="center"><img width="50%" src="non_play_button.png"></td>
+<td align="left">
+アニメ
+</td>
+</tr>
+<tr id="_e1">
+<td>E1</td>
+<td id="e1" class="event" data-hoge="e1"><img src="E1.png" width="100" height="100"/></td>
+<td width="300" class=""></td>
+<td width="300"></td>
+<td align="center"><img width="50%" src="non_play_button.png"></td>
+<td align="left">
+アニメ
+</td>
+</tr>
+<tr id="_e2">
+<td>E2</td>
+<td id="e2" class="event" data-hoge="e2"><img src="E2.png" width="100" height="100"/></td>
+<td width="300" class=""></td>
+<td width="300"></td>
+<td align="center"><img width="50%" src="non_play_button.png"></td>
+<td align="left">
+アニメ
+</td>
+</tr>
+<tr id="_a1">
+<td>A1</td>
+<td id="a1" class="event" data-hoge="a1"><img src="A1.png" width="100" height="100"/></td>
+<td width="300" class=""></td>
+<td width="300"></td>
+<td align="center"><img width="50%" src="non_play_button.png"></td>
+<td align="left">
+アニメ
+</td>
+</tr>
+<tr id="_a2">
+<td>A2</td>
+<td id="a2" class="event" data-hoge="a2"><img src="A2.png" width="100" height="100"/></td>
+<td width="300" class=""></td>
+<td width="300"></td>
+<td align="center"><img width="50%" src="non_play_button.png"></td>
+<td align="left">
+アニメ
+</td>
+</tr>
+</table>
+
+<h1>分類３：コーナーとエッジの両方が正しいスロットに入っている</h1>
+
+<table style="border-collapse: collapse;" border="1">
+<tbody>
+<tr>
+<th width="10">呼称</th>
+<th width="100">画像</th>
+<th width="300">パターン</th>
+<th width="300">考え方</th>
+<th width="120">解説動画</th>
+<th width="120">アニメ</th>
+</tr>
+<tr id="_c1">
+<td>C1</td>
+<td id="c1" class="event" data-hoge="c1"><img src="C1.png" width="100" height="100"/></td>
+<td width="300" class=""></td>
+<td width="300"></td>
+<td align="center"><img width="50%" src="non_play_button.png"></td>
+<td align="left">
+アニメ
+</td>
+</tr>
+<tr id="_c2">
+<td>C2</td>
+<td id="c2" class="event" data-hoge="c2"><img src="C2.png" width="100" height="100"/></td>
+<td width="300" class=""></td>
+<td width="300"></td>
+<td align="center"><img width="50%" src="non_play_button.png"></td>
+<td align="left">
+アニメ
+</td>
+</tr>
+<tr id="_d1">
+<td>D1</td>
+<td id="d1" class="event" data-hoge="d1"><img src="D1.png" width="100" height="100"/></td>
+<td width="300" class=""></td>
+<td width="300"></td>
+<td align="center"><img width="50%" src="non_play_button.png"></td>
+<td align="left">
+アニメ
+</td>
+</tr>
+<tr id="_d2">
+<td>D2</td>
+<td id="d2" class="event" data-hoge="d2"><img src="D2.png" width="100" height="100"/></td>
+<td width="300" class=""></td>
+<td width="300"></td>
+<td align="center"><img width="50%" src="non_play_button.png"></td>
+<td align="left">
+アニメ
+</td>
+</tr>
+<tr id="_a0">
+<td>A0</td>
+<td id="a0" class="event" data-hoge="a0"><img src="A0.png" width="100" height="100"/></td>
+<td width="300" class=""></td>
+<td width="300"></td>
+<td align="center"><img width="50%" src="non_play_button.png"></td>
+<td align="left">
+アニメ
+</td>
+</tr>
+</table>
+<br>
+<br>
+<br>
+<br>
+</div>
+</body>
+</html>
